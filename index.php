@@ -16,7 +16,7 @@
                     <li><a href="#beranda">Beranda</a></li>
                     <li><a href="#tentang">Tentang Kami</a></li>
                     <li><a href="#produk">Produk</a></li>
-                    <li><a href="login.html" class="tbl-biru">Login</a></li>
+                    <li><a href="admin.php" class="tbl-biru">Admin</a></li>
                 </ul>
             </div>
         </div>

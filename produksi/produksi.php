@@ -9,35 +9,35 @@ if ($_SESSION['username'] == null) {
   <head>
     <meta charset="UTF-8">
     <title> Admin Furniflex | Production</title>
-    <link rel="stylesheet" href="css/style_material.css">
+    <link rel="stylesheet" href="../css/style_material.css">
     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
    </head>
 <body>
   <div class="sidebar">
     <div class="logo-details">
-      <img src="assets/image/logo1.png" alt="Logo Furniflex" class="logo"/>
+      <img src="../assets/image/logo1.png" alt="Logo Furniflex" class="logo"/>
     </div>
       <ul class="nav-links">
         <li>
-          <a href="admin.php">
+          <a href="../admin.php">
             <i class='bx bx-grid-alt' ></i>
             <span class="links_name">Dashboard</span>
           </a>
         </li>
         <li>
-          <a href="ptoduksi/produksi.php" class="active">
+          <a href="../produksi/produksi.php" class="active">
             <i class='bx bx-box' ></i>
             <span class="links_name">Production</span>
           </a>
         </li>
         <li>
-            <a href="transaction/transaction.php">
+            <a href="../transaction/transaction.php">
               <i class='bx bx-list-ul' ></i>
               <span class="links_name">Transaction</span>
             </a>
           </li>
-        <li class="log_out">
+        <li class="../log_out">
           <a href="index.php">
             <i class='bx bx-log-out'></i>
             <span class="links_name">Log out</span>
@@ -51,7 +51,7 @@ if ($_SESSION['username'] == null) {
         <i class='bx bx-menu sidebarBtn'></i>
       </div>
       <div class="profile-details">
-        <img src="assets/image/admin_logo.png" alt="Logo Administrator">
+        <img src="../assets/image/Adminlogo.png" alt="Logo Administrator">
         <span class="admin_name">Administrator</span>
       </div>
     </nav>

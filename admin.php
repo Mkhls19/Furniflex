@@ -16,7 +16,7 @@
 <body>
   <div class="sidebar">
     <div class="logo-details">
-      <img src="css/image/logo1.png" alt="Logo Furniflex" class="logo"/>
+      <img src="assets/image/logo1.png" alt="Logo Furniflex" class="logo"/>
     </div>
       <ul class="nav-links">
         <li>
@@ -26,19 +26,19 @@
           </a>
         </li>
         <li>
-          <a href="material.php">
+          <a href="material/material.php">
             <i class='bx bx-cube-alt' ></i>
-            <span class="links_name">Bahan Baku</span>
+            <span class="links_name">Material</span>
           </a>
         </li>
         <li>
-          <a href="./produksi.html">
+          <a href="produksi/produksi.php">
             <i class='bx bx-archive' ></i>
             <span class="links_name">Produksi</span>
           </a>
         </li>
         <li>
-          <a href="./pengiriman.html">
+          <a href="pengiriman/pengiriman.php">
             <i class='bx bx-package' ></i>
             <span class="links_name">Pengiriman</span>
           </a>
@@ -58,7 +58,7 @@
         <span class="dashboard">Dashboard</span>
       </div>
       <div class="profile-details">
-        <img src="./AdminLogo.png" alt="Logo Administrator">
+        <img src="assets/image/AdminLogo.png" alt="Logo Administrator">
         <span class="admin_name"><?php 
           echo $_SESSION['username'];
         ?></span>
