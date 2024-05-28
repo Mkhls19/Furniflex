@@ -16,7 +16,7 @@
 <body>
   <div class="sidebar">
     <div class="logo-details">
-      <img src="../assets/image/logo1.png" alt="Logo Furniflex" class="logo"/>
+      <img src="../assets/image/logofrnflx2.png" alt="Logo Furniflex" class="logo"/>
     </div>
       <ul class="nav-links">
         <li>

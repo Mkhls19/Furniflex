@@ -72,8 +72,8 @@ elseif (isset($_GET['hapus']) && isset($_GET['id'])) {
         return;
     }
 
-    // Delete data dari tb_bahan_baku
-    $sql = "DELETE FROM bahan_material WHERE ID = ?";
+    // Delete data dari tabel bahan_material
+    $sql = "DELETE FROM bahan_material WHERE id = ?";
     $stmt = mysqli_prepare($koneksi, $sql);
     mysqli_stmt_bind_param($stmt, 'i', $id);
 

@@ -16,7 +16,7 @@
 <body>
   <div class="sidebar">
     <div class="logo-details">
-      <img src="../assets/image/logo1.png" alt="Logo Furniflex" class="logo"/>
+      <img src="../assets/image/logofrnflx2.png" alt="Logo Furniflex" class="logo"/>
     </div>
       <ul class="nav-links">
         <li>
@@ -91,16 +91,16 @@
               while ($data = mysqli_fetch_assoc($result)) {
                 echo "
                   <tr>
-                    <td>{$data['ID']}</td>
+                    <td>{$data['id']}</td>
                     <td>{$data['kategori']}</td>
                     <td>{$data['harga']}</td>
                     <td>{$data['jumlah']}</td>
                     <td>
                       <button class='btn btn-edit'>
-                        <a href='material-edit.php?id={$data['ID']}'><i class='bx bx-edit'></i> Edit </a>
+                        <a href='material-edit.php?id={$data['id']}'><i class='bx bx-edit'></i> Edit </a>
                       </button>
                       <button class='btn btn-delete'>
-                        <a href='material-proses.php?id={$data['ID']}'><i class='bx bx-trash'></i> Hapus </a>
+                        <a href='material-proses.php?hapus=true&id={$data['id']}'><i class='bx bx-trash'></i> Hapus </a>
                       </button>
                     </td>
                   </tr>

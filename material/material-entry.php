@@ -16,7 +16,7 @@
 <body>
   <div class="sidebar">
     <div class="logo-details">
-      <img src="../assets/image/logo1.png" alt="Logo Furniflex" class="logo"/>
+      <img src="../assets/image/logofrnflx2.png" alt="Logo Furniflex" class="logo"/>
     </div>
       <ul class="nav-links">
         <li>
@@ -66,7 +66,7 @@
 	   <div class="form-login">
       <form action="material-proses.php" method="post" enctype="multipart/form-data">
         <label for="kategori">Kategori</label>
-        <input class="input" type="text" name="jenis" id="jenis" placeholder="kategori" />
+        <input class="input" type="text" name="kategori" id="kategori" placeholder="kategori" />
         <label for="jumlah">Jumlah</label>
         <input class="input" type="number" name="jumlah" id="jumlah" placeholder="Jumlah" />
         <label for="harga">Harga</label>

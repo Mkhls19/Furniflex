@@ -1,7 +1,7 @@
 <?php
   include '../koneksi.php';
-  $id = $_GET['ID'];
-  if(!isset($_GET['ID'])) {
+  $id = $_GET['id'];
+  if(!isset($_GET['id'])) {
     echo "
       <script>
         alert('Tidak ada ID yang Terdeteksi');
@@ -10,7 +10,7 @@
     ";
   }
 
-  $sql = "SELECT * FROM bahan_material WHERE ID = '$id'";
+  $sql = "SELECT * FROM bahan_material WHERE id = '$id'";
   $result = mysqli_query($koneksi, $sql);
   $data = mysqli_fetch_assoc($result);
 
@@ -31,7 +31,7 @@
 <body>
   <div class="sidebar">
     <div class="logo-details">
-      <img src="../assets/image/logo1.png" alt="Logo Furniflex" class="logo"/>
+      <img src="../assets/image/logofrnflx2.png" alt="Logo Furniflex" class="logo"/>
     </div>
 	    <ul class="nav-links">
         <li>
@@ -72,17 +72,17 @@
         <i class='bx bx-menu sidebarBtn'></i>
       </div>
       <div class="profile-details">
-        <img src="../assets/images/admin.png" alt="Logo Administrator">
+        <img src="../assets/image/adminlogo.png" alt="Logo Administrator">
           <span class="admin_name"><?php echo $_SESSION['username'];?></span>
       </div>
     </nav>
      <div class="home-content">
-      <h3>Edit Data Bahan Material</h3>
+      <h3>Edit Data Material</h3>
 	   <div class="form-login">
-      <form action="bahanbaku-proses.php" method="post" enctype="multipart/form-data">
+      <form action="material-proses.php" method="post" enctype="multipart/form-data">
           <input type="hidden" name="id" value="<?= $data['id'] ?>">
-              <label for="jenis">Jenis</label>
-              <input class="input" type="text" name="jenis" id="jenis" value="<?= $data['jenis'] ?>"/>
+              <label for="kategori">Kategori</label>
+              <input class="input" type="text" name="kategori" id="kategori" value="<?= $data['kategori'] ?>"/>
               <label for="jumlah">Jumlah</label>
               <input class="input" type="number" name="jumlah" id="jumlah" value="<?= $data['jumlah']?>"/>
               <label for="harga">Harga</label>
