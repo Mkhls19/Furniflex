@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Register - FurniFlex</title>
-    <link rel="stylesheet" href="css/style_register.css">
+    <link rel="stylesheet" href="./css/style_register.css">
 </head>
 <body>
     <div class="register-wrapper">
@@ -16,8 +16,8 @@
             <input type="password" name="confirm_password" placeholder="Confirm Password" required> 
             <button type="submit">Register</button>
         </form>
-        <p>Sudah memiliki akun? <a href="login.html">Login</a></p>
-        <p><a href="index.html">Beranda</a></p>
+        <p>Sudah memiliki akun? <a href="./login.php">Login</a></p>
+        <p><a href="./index.php">Beranda</a></p>
     </div>
     <script>
         function RegisterForm() {

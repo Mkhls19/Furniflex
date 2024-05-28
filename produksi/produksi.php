@@ -16,7 +16,7 @@ if ($_SESSION['username'] == null) {
 <body>
   <div class="sidebar">
     <div class="logo-details">
-      <img src="../assets/image/logo1.png" alt="Logo Furniflex" class="logo"/>
+      <img src="../assets/image/logofrnflx2.png" alt="Logo Furniflex" class="logo"/>
     </div>
       <ul class="nav-links">
         <li>
@@ -37,8 +37,8 @@ if ($_SESSION['username'] == null) {
               <span class="links_name">Transaction</span>
             </a>
           </li>
-        <li class="../log_out">
-          <a href="index.php">
+        <li class="log_out">
+          <a href="../logout.php">
             <i class='bx bx-log-out'></i>
             <span class="links_name">Log out</span>
           </a>
@@ -63,8 +63,8 @@ if ($_SESSION['username'] == null) {
 	   <table class="table-data">
 		<thead>
 		   <tr>
-			<th scope="col" style="width: 20%">Nama Sepatu</th>
-			<th scope="col" style="width: 20%">Jumlah Sepatu</th>
+			<th scope="col" style="width: 20%">Nama Furniture</th>
+			<th scope="col" style="width: 20%">Jumlah Furniture</th>
             <th scope="col" style="width: 20%">Durasi Produksi</th>
             <th scope="col" style="width: 20%">Pembuatan Ke</th>
 			<th scope="col" style="width: 20%">Aksi</th>
@@ -73,7 +73,7 @@ if ($_SESSION['username'] == null) {
 		<tbody>
     <?php
 					include '../koneksi.php';
-					$sql = "SELECT * FROM tb_categories";
+					$sql = "SELECT * FROM produksi";
 					$result = mysqli_query($koneksi, $sql);
 					if (mysqli_num_rows($result) == 0) {
 						echo "

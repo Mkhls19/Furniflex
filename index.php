@@ -4,19 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FurniFlex-Produksi Mebel</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="./css/style.css">
     
 </head>
 <body>
     <nav>
         <div class="wrapper">
-            <div class="logo"><a href=''>FurniFlex</a></div>
+        <div class="logo-container">
+        <img src="./assets/image/logofrnflx2.png" alt="Logo Furniflex" width="30%" class="logo"/>
+            <input type="checkbox" id="click">
+            <label for="click" class="menu-btn">
+                <i class="fas fa-bars"></i>
+            </label>
             <div class="menu">
                 <ul>
                     <li><a href="#beranda">Beranda</a></li>
                     <li><a href="#tentang">Tentang Kami</a></li>
                     <li><a href="#produk">Produk</a></li>
-                    <li><a href="admin.php" class="tbl-biru">Admin</a></li>
+                    <li><a href="admin.php">Login</a></li>
                 </ul>
             </div>
         </div>
@@ -104,22 +109,18 @@
                 <div class="kartu-produk" id="produk1">
                     <img src="assets/image/meja1.jpg"/>
                     <p>Meja</p>
-                    <button class="pesan-button" onclick="pesanProduk('Meja', 'assets/image/meja1.jpg')"><a href="pemesanan_produk.php?produk=Meja&gambar=assets/image/meja1.jpg">Pesan</a></button>
                 </div>
                 <div class="kartu-produk" id="produk2">
                     <img src="assets/image/kursi1.jpg"/>
                     <p>Kursi</p>
-                    <button class="pesan-button" onclick="pesanProduk('Kursi', 'assets/image/kursi1.jpg')"><a href="pemesanan_produk.php?produk=Kursi&gambar=assets/image/kursi1.jpg">Pesan</a></button>
                 </div>
                 <div class="kartu-produk" id="produk3">
                     <img src="assets/image/lemari1.jpg"/>
                     <p>Lemari</p>
-                    <button class="pesan-button" onclick="pesanProduk('Lemari', 'assets/image/lemari1.jpg')"><a href="pemesanan_produk.php?produk=Lemari&gambar=assets/image/lemari1.jpg">Pesan</a></button>
                 </div>
                 <div class="kartu-produk" id="produk4">
                     <img src="assets/image/rak1.jpg"/>
                     <p>Rak Sepatu</p>
-                    <button class="pesan-button" onclick="pesanProduk('Rak Sepatu', 'assets/image/rak1.jpg')"><a href="pemesanan_produk.php?produk=Rak Sepatu&gambar=assets/image/rak1.jpg">Pesan</a></button>
                 </div>
             </div>
         </div>

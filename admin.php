@@ -16,7 +16,7 @@
 <body>
   <div class="sidebar">
     <div class="logo-details">
-      <img src="assets/image/logo1.png" alt="Logo Furniflex" class="logo"/>
+      <img src="assets/image/logofrnflx2.png" alt="Logo Furniflex" class="logo"/>
     </div>
       <ul class="nav-links">
         <li>
@@ -44,7 +44,7 @@
           </a>
         </li>
         <li class="log_out">
-          <a href="logout.html">
+          <a href="logout.php">
             <i class='bx bx-log-out-circle'></i>
             <span class="links_name">Log out</span>
           </a>

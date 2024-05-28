@@ -14,8 +14,8 @@
             <input type="password" name="password" placeholder="Password" required>
             <button type="submit">Login</button>
         </form>
-        <p>Belum memiliki akun? <a href="register.html">Register</a></p>
-        <p><a href="index.html">Beranda</a></p>
+        <p>Belum memiliki akun? <a href="register.php">Register</a></p>
+        <p><a href="index.php">Beranda</a></p>
     </div>
 
     <?php
@@ -34,7 +34,7 @@
         // Simpan username ke session
         $_SESSION['username'] = $username;
         setcookie('username', $username, time() + (86400 * 30), '/'); // Set cookie dengan nama 'username' dan nilai username pengguna
-        echo "<script>alert('Login berhasil!'); window.location.href = 'index.php';</script>";
+        echo "<script>alert('Login berhasil!'); window.location.href = 'admin.php';</script>";
         exit();
       } else {
         echo "<script>alert('Username atau password salah.'); window.location.href = 'login.php';</script>";
