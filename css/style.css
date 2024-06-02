@@ -34,6 +34,7 @@ body {
     float: right;
 }
 
+/* Navbar */
 nav {
     display: flex;
     height: 80px;
@@ -60,6 +61,7 @@ nav .logo {
 }
 
 @media (max-width: 992px) {
+    /* Navbar Responsive */
     nav .logo {
         max-width: 80px;
         width: 80%;
