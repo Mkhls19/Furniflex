@@ -94,3 +94,4 @@ elseif (isset($_GET['hapus']) && isset($_GET['id'])) {
     header('location: material.php');
     exit;
 }
+

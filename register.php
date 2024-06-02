@@ -40,12 +40,11 @@
     </script>
     <?php
         session_start();
-
         // Cek apakah ada data yang dikirimkan melalui metode POST
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $username = $_POST['username'];
             $password = $_POST['password'];
-            $validUsername = "Mkhls";
+            $validUsername = "Mkuhlisin";
             $validPassword = "2218055";
 
             if ($username === "" || $password === "") {

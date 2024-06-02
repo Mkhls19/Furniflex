@@ -8,9 +8,8 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8">
-    <title> Produksi</title>
+    <title> Tambah Produksi </title>
     <link rel="stylesheet" href="../css/style_material.css">
-    <link rel="stylesheet" href="../css/style_btn.css">
     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
    </head>
@@ -20,7 +19,7 @@
       <img src="../assets/image/logofrnflx2.png" alt="Logo Furniflex" class="logo"/>
     </div>
       <ul class="nav-links">
-        <li>
+      <li>
           <a href="../admin.php">
             <i class='bx bx-palette' ></i>
             <span class="links_name">Dashboard</span>
@@ -62,65 +61,30 @@
         <span class="admin_name"><?php echo $_SESSION['username']; ?></span>
       </div>
     </nav>
-  <div class="home-content">
-    <h2>Data Produksi</h2>
-    <button class= "btn btn-tambah">
-      <i class="bx bx-plus"></i><a href="produksi-entry.php"> Tambah Data </a>
-		</button>
-    <button class="btn btn-cetak">
-      <i class="bx bx-printer"></i><a href="produksi-cetak.php"> Cetak PDF </a>
-		</button>
-		<table class="table-data">
-		   <thead>
-          <tr>
-            <th style="width: 10%">ID Material</th>
-            <th style="width: 10%">Nama Mabel</th>
-            <th style="width: 10%">Tanggal Produksi</th>
-            <th style="width: 10%">Jumlah Produksi</th>
-            <th style="width: 10%">Produksi Ke</th>
-            <th style="width: 10%">Status Produksi</th>
-            <th style="width: 15%">Action</th>
-			    </tr>
-		   </thead>
-		    <tbody>
-        <?php
-            include '../koneksi.php';
-            $sql = "SELECT * FROM produksi";
-            $result = mysqli_query($koneksi, $sql);
-            if (mysqli_num_rows($result) == 0) {
-              echo "
-          <tr>
-            <td colspan='8' align='center'>
-                Data Kosong
-            </td>
-          </tr>
-          ";
-            }
-            while ($data = mysqli_fetch_assoc($result)) {
-              echo "
-                      <tr>
-                        <td>$data[id_material]</td>
-                        <td>$data[nama_mabel]</td>
-                        <td>$data[tgl_produksi]</td>
-                        <td>$data[jumlah_produksi]</td>
-                        <td>$data[produksi_ke]</td>
-                        <td>$data[status_produksi]</td>
-                        <td>
-                          <button class= 'btn btn-edit'>
-		                          <a href='produksi-edit.php?id=$data[id]'><i class='bx bx-edit'></i> Edit </a>
-		                      </button>
-                          <button class= 'btn btn-delete'>
-		                          <a href='produksi-proses.php?hapus&id=$data[id]' onclick='return confirm('Apakah anda yakin menghapus data ini?')'>
-                              <i class='bx bx-trash'></i> Hapus </a>
-		                      </button>
-                        </td>
-                      </tr>
-                    "; } ?>
-		   </tbody>
-		</table>
-	   </div>
+      <div class="home-content">
+      <h3>Tambah Data Produksi</h3>
+      <div class="form-login">
+        <form action="produksi-proses.php" method="post" enctype="multipart/form-data">
+          <label for="id_material">ID Material</label>
+          <input class="input" type="text" name="id_material" id="id_material" placeholder="ID Material" />
+          <label for="nama_mabel">Nama Mabel</label>
+          <input class="input" type="text" name="nama_mabel" id="nama_mabel" placeholder="Nama Mabel" />
+          <label for="tgl_produksi">Tanggal Produksi</label>
+          <input class="input" type="date" name="tgl_produksi" id="tgl_produksi" placeholder="Tanggal Produksi" />
+          <label for="jumlah_produksi">Jumlah Produksi</label>
+          <input class="input" type="number" name="jumlah_produksi" id="jumlah_produksi" placeholder="Jumlah Produksi" />
+          <label for="produksi_ke">Produksi Ke</label>
+          <input class="input" type="number" name="produksi_ke" id="produksi_ke" placeholder="Produksi_ke" />
+          <label for="status_produksi">Status Produksi</label>
+          <input class="input" type="text" name="status_produksi" id="status_produksi" placeholder="Status Produksi" />
+          <div align="center">
+            <button type="submit" class="btn btn-simpan" name="simpan"> Simpan </button>
+            <button type="reset" class="btn btn-reset" name="reset"> Reset </button>
+          </div>
+        </form>
+      </div>
     </div>
-    <script>
+    <script>   
       let sidebar = document.querySelector(".sidebar");
       let sidebarBtn = document.querySelector(".sidebarBtn");
           sidebarBtn.onclick = function() {

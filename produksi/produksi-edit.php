@@ -5,12 +5,12 @@
     echo "
       <script>
         alert('Tidak ada ID yang Terdeteksi');
-        window.location = 'material.php';
+        window.location = 'produksi.php';
       </script>
     ";
   }
 
-  $sql = "SELECT * FROM bahan_material WHERE id = '$id'";
+  $sql = "SELECT * FROM produksi WHERE id = '$id'";
   $result = mysqli_query($koneksi, $sql);
   $data = mysqli_fetch_assoc($result);
 
@@ -23,7 +23,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8">
-    <title> Edit Bahan material </title>
+    <title> Edit Data Produksi </title>
     <link rel="stylesheet" href="../css/style_material.css">
     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -34,20 +34,20 @@
       <img src="../assets/image/logofrnflx2.png" alt="Logo Furniflex" class="logo"/>
     </div>
 	    <ul class="nav-links">
-        <li>
+       <li>
           <a href="../admin.php">
             <i class='bx bx-palette' ></i>
             <span class="links_name">Dashboard</span>
           </a>
         </li>
         <li>
-          <a href="../material/material.php" class="active">
+          <a href="../material/material.php">
             <i class='bx bx-cube-alt' ></i>
-            <span class="links_name">Material</span>
+            <span class="links_name">material</span>
           </a>
         </li>
         <li>
-          <a href="../produksi/produksi.php">
+          <a href="../produksi/produksi.php" class="active">
             <i class='bx bx-archive' ></i>
             <span class="links_name">Produksi</span>
           </a>
@@ -60,7 +60,7 @@
         </li>
         <li class="log_out">
           <a href="../logout.php">
-            <i class='bx bx-log-out-circle'></i>
+           <i class='bx bx-log-out-circle'></i>
             <span class="links_name">Log out</span>
           </a>
         </li>
@@ -76,24 +76,30 @@
           <span class="admin_name"><?php echo $_SESSION['username'];?></span>
       </div>
     </nav>
-     <div class="home-content">
-      <h3>Edit Data Bahan Material</h3>
-	   <div class="form-login">
-      <form action="material-proses.php" method="post" enctype="multipart/form-data">
-          <input type="hidden" name="id" value="<?= $data['id'] ?>">
-              <label for="kategori">Kategori</label>
-              <input class="input" type="text" name="kategori" id="kategori" value="<?= $data['kategori'] ?>"/>
-              <label for="jumlah">Jumlah</label>
-              <input class="input" type="number" name="jumlah" id="jumlah" value="<?= $data['jumlah']?>"/>
-              <label for="harga">Harga</label>
-              <input class="input" type="number" name="harga" id="harga" value="<?= $data['harga']?>"/>
-              <div align="center">
-              <button type="submit" class="btn btn-simpan" name="edit"> Edit </button>
-              <button type="reset" class="btn btn-reset" name="reset"> Reset </button>
-              </div> 
-       </form>
-	   </div>
-	</div>
+    <div class="home-content">
+  <h3>Edit Data Produksi</h3>
+  <div class="form-login">
+    <form action="produksi-proses.php" method="post" enctype="multipart/form-data">
+      <input type="hidden" name="id" value="<?= $data['id'] ?>">
+      <label for="id_material">ID Material</label>
+      <input class="input" type="text" name="id_material" id="id_material" value="<?= $data['id_material'] ?>" />
+      <label for="nama_mabel">Nama Mabel</label>
+      <input class="input" type="text" name="nama_mabel" id="nama_mabel" value="<?= $data['nama_mabel'] ?>" />
+      <label for="tgl_produksi">Tanggal Produksi</label>
+      <input class="input" type="date" name="tgl_produksi" id="tgl_produksi" value="<?= $data['tgl_produksi'] ?>" />
+      <label for="jumlah_produksi">Jumlah Produksi</label>
+      <input class="input" type="number" name="jumlah_produksi" id="jumlah_produksi" value="<?= $data['jumlah_produksi'] ?>" />
+      <label for="produksi_ke">Produksi Ke</label>
+      <input class="input" type="text" name="produksi_ke" id="produksi_ke" value="<?= $data['produksi_ke'] ?>" />
+      <label for="status_produksi">Status Produksi</label>
+      <input class="input" type="text" name="status_produksi" id="status_produksi" value="<?= $data['status_produksi'] ?>" />
+      <div align="center">
+        <button type="submit" class="btn btn-simpan" name="edit"> Ubah </button>
+        <button type="reset" class="btn btn-reset" name="reset"> Reset </button>
+      </div>
+    </form>
+  </div>
+</div>
 </div>
    <script>
 	let sidebar = document.querySelector(".sidebar");

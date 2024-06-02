@@ -69,7 +69,7 @@
 		<table class="table-data">
     <thead>
           <tr>
-            <th style="width: 25%">ID</th>
+            <th style="width: 25%">ID Material</th>
             <th style="width: 25%">Kategori Bahan</th>
             <th style="width: 25%">Harga</th>
             <th style="width: 25%">Jumlah</th>
@@ -101,7 +101,7 @@
                       </button>
                       <button class='btn btn-delete'>
                         <a href='material-proses.php?hapus=true&id={$data['id']}'><i class='bx bx-trash'></i> Hapus </a>
-                      </button>
+                      </button
                     </td>
                   </tr>
                 ";
