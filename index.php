@@ -126,6 +126,12 @@
         </div>
     </section>
 
+    <div id="copyright">
+        <div class="wrapper">
+            &copy; 2024. <b>FurniFlex</b> All Rights Reserved.
+        </div>
+    </div>
+    
     <script>
         // Fungsi untuk menangani pesanan produk
         function pesanProduk(namaProduk, gambarProduk) {
@@ -134,11 +140,5 @@
             document.getElementById("nama_produk").textContent = namaProduk;
         }
     </script>
-    <div id="copyright">
-        <div class="wrapper">
-            &copy; 2024. <b>FurniFlex</b> All Rights Reserved.
-        </div>
-    </div>
-    
 </body>
 </html>

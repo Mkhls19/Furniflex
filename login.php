@@ -25,7 +25,7 @@
     if ($_SERVER['REQUEST_METHOD'] === 'POST') {
       $username = $_POST['username'];
       $password = $_POST['password'];
-      $validUsername = "Mkhls";
+      $validUsername = "Muhlisin";
       $validPassword = "2218055";
 
       if ($username === "" || $password === "") {
